@@ -233,6 +233,10 @@ cover:
           service: script.cover_group_position
           data:
             position: "{{position}}"
+        set_cover_tilt_position:
+          service: script.cover_group_position
+          data:
+            tilt_position: "{{tilt}}"
         value_template: "{{is_state('sensor.cover_group', 'open')}}"
         icon_template: >-
           {% if is_state('sensor.cover_group', 'open') %}
